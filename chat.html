@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="chatmain.css" />
+		<style type="text/css">
+			#rbJordan{
+				background: url('images/avatars/chef-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#rbMike{
+				background: url('images/avatars/cop-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#curUser{
+				background: url('images/avatars/cop-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#rbSasha{
+				background: url('images/avatars/cowboy-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#rbMichelle{
+				background: url('images/avatars/doctor-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='topNav'>
+			<div id='siteTilleHolder'>
+				<h1 id='siteTile'>Chat <span id='st1'>Mania</span></h1>
+			</div>
+			<div id='topLinksHolder'>
+				<ul>
+					<li>HOME</li>
+					<li>ABOUT</li>
+					<li>CONTACT</li>
+				</ul>
+			</div>
+		</div>
+		<div id='main'>
+			<div id='rightBar'>
+				<div id='adBar'>
+				
+				</div>
+				<div id='chatBar'>
+					<div id='chatBarInner'>
+						<div id='user1' class='userChatHolder'>
+							<div class='userChatHolderInner'>
+								<div class='userChatHolderTxt'>
+									<div class='cloud'></div>
+									<a>Life is just bitter </a>
+								</div>
+								<div id="rbJordan" class="userBoxImage2">
+								</div>
+							</div>
+						</div>
+						<div id='user1' class='userChatHolder'>
+							<div class='userChatHolderInner'>
+								<div class='userChatHolderTxt'>
+									<div class='cloud'></div>
+									<a>Life is just bitter Life is just bitter Life is just bitter </a>
+								</div>
+								<div id="rbJordan" class="userBoxImage2">
+								</div>
+							</div>
+						</div>
+						<div id='me' class='userChatHolder'>
+							<div class='curUserChatHolderInner'>
+								<div class='curUserChatHolderTxt'>
+									<div class='cloud'></div>
+									<a>Life is just bitter </a>
+								</div>
+								<div id="rbMike" class="userBoxImage1">
+								</div>
+							</div>
+						</div>
+						<div id='user1' class='userChatHolder'>
+							<div class='userChatHolderInner'>
+								<div class='userChatHolderTxt'>
+									<div class='cloud'></div>
+									<a>Life is just bitter </a>
+
+								</div>
+								<div id="rbJordan" class="userBoxImage2">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id='chatBox'>
+						<div id="curUser" class="recentUserBoxImage">
+						</div>
+						<input type='text' id='chatTxt' value='ENTER TEXT' onclick='if(this.value=="ENTER TEXT"){this.value=""};' onblur='if(this.value==""){this.value="ENTER TEXT"}' >
+						<a id='postBtn'>Post</a>
+					</div>
+				</div>
+			</div>
+			<div id='leftBar'>
+				<h2>Most Recent Users</h2>
+				<div id="leftBarBottom">
+					<div class="recentUserBox">
+						<div id="rbJordan" class="recentUserBoxImage">
+						</div>
+						<a class="recentUserBoxName">Jordan</a>
+					</div>
+					<div class="recentUserBox">
+						<div id="rbMike" class="recentUserBoxImage">
+						</div>
+						<a class="recentUserBoxName">Mike</a>
+					</div>
+					<div class="recentUserBox">
+						<div id="rbSasha" class="recentUserBoxImage">
+						</div>
+						<a class="recentUserBoxName">Sasha</a>
+					</div>
+					<div class="recentUserBox">
+						<div id="rbMichelle"  class="recentUserBoxImage">
+						</div>
+						<a class="recentUserBoxName">Michelle</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://widgets.amazon.com/Widget-Source/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="x-ua-compatible" content="IE=Edge"><title>Amazon.com widget - Widget Source</title><script type="text/javascript" src="./Amazon.com widget - Widget Source_files/urchin._V885305239_.js" async="" defer=""></script></head><body>
+
+
+<script type="text/javascript" language="JavaScript">
+    djConfig = {
+             bindEncoding: "UTF-8",
+             useXDomain:true,
+             baseScriptUri:"../javascript/dojo.js"
+            };
+    typepad_long_name='Amazon.com Search Widget';
+	mediaServerUrl="https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc/";
+    marketPlace="US";
+    onejsMarketPlaces = {
+                               "US": ""
+                          
+                        };
+    widgetMediaServerUrl="https://wms-na.amazon-adsystem.com/20070822/US/";
+    widgetServerSecureUrl="https://ws-na.amazon-adsystem.com";
+    searchWidgetACUrl="https://affiliate-program.amazon.com/gp/associates/promo/search-widget.html";
+    defaultTag='widgetsamazon-20';
+    carouselParamsTable = "<table class='elegant' width='100%' cellspacing='0' cellpadding='0' border='0' style='width: 600px;'><tbody><tr><th width='166' valign='top'>Parameter</th><th width='405' valign='top'>Description</th><th width='405' valign='top'>Valid values</th></tr><tr><td width='166' valign='top'>tag</td><td width='166' valign='top'>Your Associate id</td><td width='166' valign='top'>e.g. widgetsamazon-20</td></tr><tr><td width='166' valign='top'>width</td><td width='166' valign='top'>Widget width in pixels</td><td width='166' valign='top' rowspan='2'>Valid combinations of Width x Height are: 120x500, 160x600, 400x150, 500x175, 600x200</td></tr><tr><td width='166' valign='top'>height</td><td width='166' valign='top'>Widget height in pixels</td></tr><tr><td width='166' valign='top'>title</td><td width='405' valign='top'>Widget title</td><td width='405' valign='top'>String value up to 60 characters long</td></tr><tr><td width='166' valign='top'>widgetType</td><td width='405' valign='top'>Determines how products will be added to your Carousel. <a href='https://affiliate-program.amazon.com/gp/associates/help/t41/a1'>Learn More.</a></td><td width='405' valign='top'>Valid values include:<br />ASINList<br />SearchAndAdd<br />Bestsellers<br />NewReleases<br />MostWishedFor<br />MostGifted</td></tr><tr><td width='166' valign='top'>searchIndex</td><td width='405' valign='top'>Determines the Amazon category used for adding products to the widget. Not applicable when WidgetType='ASINList'<br /><a href='https://affiliate-program.amazon.com/gp/associates/help/t41/a5'>What is a Search Index?</a></td><td width='405' valign='top'>Any valid Amazon SearchIndex. <a href='https://affiliate-program.amazon.com/gp/associates/help/t41/a5'>Click here</a> for a list of valid SearchIndex values</td></tr><tr><td width='166' valign='top'>browseNode</td><td width='405' valign='top'>Determines the Amazon sub-category used for adding products to the widget. Not applicable when WidgetType='ASINList'<br /><a href='https://affiliate-program.amazon.com/gp/associates/help/t41/a6'>What is a Browse Node?</a></td><td width='405' valign='top'>Any valid Amazon BrowseNodeId. <a href='https://affiliate-program.amazon.com/gp/associates/help/t41/a6'>Click here</a> for a list of valid BrowseNode values</td></tr><tr><td width='166' valign='top'>ASIN</td><td width='405' valign='top'>Comma-separated list of ASINs that will be added to the widget. Only applicable when WidgetType='ASINList'</td><td width='405' valign='top'>All valid Amazon ASINs</td></tr><tr><td width='166' valign='top'>keywords</td><td width='405' valign='top'>Search keyword used when WidgetType='SearchAndAdd'.</td><td width='405' valign='top'>Any string value</td></tr><tr><td width='166' valign='top'>shuffleProducts</td><td width='405' valign='top'>Set to True if you want the widget to show products in a random order each time it is displayed</td><td width='405' valign='top'>True, False</td></tr><tr><td width='166' valign='top'>showBorder</td><td width='405' valign='top'>Set to True if you want a black border around the widget</td><td width='405' valign='top'>True, False</td></tr></tbody></table>";
+    
+        searchParamsTable = "<table class='elegant' width='100%' cellspacing='0' cellpadding='0' border='0' style='width: 600px;'><tbody><tr><th width='166' valign='top'>Parameter</th><th width='405' valign='top'>Description</th><th width='405' valign='top'>Valid values</th></tr><tr><td width='166' valign='top'>tracking_id</td><td width='405' valign='top'>Your Associate tracking ID</td><td width='405' valign='top'>e.g. widgetsamazon-20</td></tr><tr><td width='166' valign='top'>width</td><td width='405' valign='top'>Widget width in pixels</td><td width='405' valign='top'>Integer value between 160 and 800</td></tr><tr><td width='166' valign='top'>columns</td><td width='405' valign='top'>The number of columns to be displayed in search results</td><td width='405' valign='top'>Any integer value (if width is also specified and number of columns given do not fit into the width, then the number of columns are decided based on width)</td></tr><tr><td width='166' valign='top'>rows</td><td width='405' valign='top'>The number of rows to be displayed in search results</td><td width='405' valign='top'>Any integer value (>= 1)</td></tr><tr><td width='166' valign='top'>default_search_key</td><td width='405' valign='top'>The default search phrase used when the widget is first displayed</td><td width='405' valign='top'>Any string value</td></tr><tr><td width='166' valign='top'>search_index</td><td width='405' valign='top'>Use this parameter to restrict the user's search to a specific Amazon category. <a href='https://affiliate-program.amazon.comgp/associates/help/t44/a2'>Learn More</a><br /><a href='https://affiliate-program.amazon.comgp/associates/help/t41/a5'>What is a Search Index?</a%gt;</td><td width='405' valign='top'>Any valid Amazon SearchIndex. <a href='https://affiliate-program.amazon.com/gp/associates/help/t41/a5'>Click here</a> for a list of valid SearchIndex values</td></tr><tr><td width='166' valign='top'>show_image</td><td width='405' valign='top'>Set to 'true' if you want the widget to display product images</td><td width='405' valign='top'>true or false</td></tr><tr><td width='166' valign='top'>show_price</td><td width='405' valign='top'>Set to 'true' if you want the widget to show the product price</td><td width='405' valign='top'>true or false</td></tr><tr><td width='166' valign='top'>show_rating</td><td width='405' valign='top'>Set to 'true' if you want the widget to display product ratings</td><td width='405' valign='top'>true or false</td></tr><tr><td width='166' valign='top'>theme</td><td width='405' valign='top'>You can choose between two themes - 'default' and 'dark'. This is a quick way to customize the look and feel</td><td width='405' valign='top'>default, dark</td></tr><tr><td width='166' valign='top'>bg_color</td><td width='405' valign='top'>Changes the background color of the widget. If this parameter is specified, it overrides 'theme' parameter.</td><td width='405' valign='top'>Any hex color value (i.e. #000000)</td></tr><tr><td width='166' valign='top'>title_color</td><td width='405' valign='top'>Changes the color of the title in the product display section of the widget</td><td width='405' valign='top'>Any hex color value (i.e. #FFFFFF)</td></tr><tr><td width='166' valign='top'>price_color</td><td width='405' valign='top'>Changes the color of the price in the product display section of the widget</td><td width='405' valign='top'>Any hex color value (i.e. #FFFFFF)</td></tr><tr><td width='166' valign='top'>rounded_corners</td><td width='405' valign='top'>Set to 'false' to get square corners. By default, corners are rounded</td><td width='405' valign='top'>true, false</td></tr></tbody></table>";
+    
+    eysParamsTable = "<table class='elegant' width='100%' cellspacing='0' cellpadding='0' border='0' style='width: 600px;'><tbody><tr><th width='166' valign='top'>Parameter</th><th width='405' valign='top'>Description</th><th width='405' valign='top'>Valid values</th></tr><tr><td width='166' valign='top'>tag</td><td width='405' valign='top'>Your Associate id</td><td width='405' valign='top'>e.g. widgetsamazon-20</td></tr><tr><td width='166' valign='top'>title</td><td width='405' valign='top'>Widget title</td><td width='405' valign='top'>String value up to 60 characters long</td></tr><tr><td width='166' valign='top'>width</td><td width='405' valign='top'>Widget width in pixels</td><td width='405' valign='top'>Integer value between 150 and 800</td></tr><tr><td width='166' valign='top'>columns</td><td width='405' valign='top'>The number of columns to be displayed in the search results</td><td width='405' valign='top'>Any integer value</td></tr><tr><td width='166' valign='top'>rows</td><td width='405' valign='top'>The number of rows to be displayed in the search results</td><td width='405' valign='top'>Any integer value</td></tr><tr><td width='166' valign='top'>ASIN</td><td width='405' valign='top'>Comma-separated list of ASINs that will be added to the widget.</td><td width='405' valign='top'>All valid Amazon ASINs</td></tr><tr><td width='166' valign='top'>shuffleProducts</td><td width='405' valign='top'>Set to True if you want the widget to show products in a random order each time it is displayed</td><td width='405' valign='top'>True, False</td></tr><tr><td width='166' valign='top'>showImage</td><td width='405' valign='top'>Set to True if you want the widget to display product images</td><td width='405' valign='top'>True, False</td></tr><tr><td width='166' valign='top'>showPrice</td><td width='405' valign='top'>Set to True if you want the widget to show the product price</td><td width='405' valign='top'>True, False</td></tr><tr><td width='166' valign='top'>showRating</td><td width='405' valign='top'>Set to True if you want the widget to display product ratings</td><td width='405' valign='top'>True, False</td></tr></tbody></table>";
+    mp3ParamsTable = "<table class='elegant' width='100%' cellspacing='0' cellpadding='0' border='0' style='width: 600px;'><tbody><tr><th width='166' valign='top'>Parameter</th><th width='405' valign='top'>Description</th><th width='405' valign='top'>Valid values</th></tr><tr><td width='166' valign='top'>tag</td><td width='166' valign='top'>Your Associate id</td><td width='166' valign='top'>e.g. widgetsamazon-20</td></tr><tr><td width='166' valign='top'>width</td><td width='166' valign='top'>Widget width in pixels</td><td width='166' valign='top' rowspan='2'>Valid combinations of Width x Height are: 250 x 250, 336 x 280, 120 x 300, 160 x 300, 125 x 125, 120 x 90, 234 x 60</td></tr><tr><td width='166' valign='top'>height</td><td width='166' valign='top'>Widget height in pixels</td></tr><tr><td width='166' valign='top'>title</td><td width='405' valign='top'>Widget title</td><td width='405' valign='top'>String value up to 60 characters long</td></tr><tr><td width='166' valign='top'>widgetType</td><td width='405' valign='top'>Determines how products will be added to your MP3 Clips widget. <a href='https://affiliate-program.amazon.com/gp/associates/help/t42/a1'>Learn More.</a></td><td width='405' valign='top'>Valid values include:<br />ASINList<br />SearchAndAdd<br />Bestsellers</td></tr><tr><td width='166' valign='top'>browseNode</td><td width='405' valign='top'>Determines the Amazon sub-category used for adding products to the widget. Not applicable when WidgetType='ASINList'<br /><a href='https://affiliate-program.amazon.com/gp/associates/help/t42/a6'>What is a Browse Node?</a></td><td width='405' valign='top'>All valid Browse Node values under the MP3Download browse node. <a href='https://affiliate-program.amazon.com/gp/associates/help/t42/a6'>Click here</a> for a list of valid BrowseNode values</td></tr><tr><td width='166' valign='top'>ASIN</td><td width='405' valign='top'>Comma-separated list of ASINs that will be added to the widget. Only applicable when WidgetType='ASINList'</td><td width='405' valign='top'>All valid song/album ASINs</td></tr><tr><td width='166' valign='top'>keywords</td><td width='405' valign='top'>Search keyword used when WidgetType='SearchAndAdd'.</td><td width='405' valign='top'>Any string value</td></tr><tr><td width='166' valign='top'>shuffleTracks</td><td width='405' valign='top'>Set to True if you want the widget to show tracks in a random order each time it is displayed</td><td width='405' valign='top'>True, False</td></tr><tr><td width='166' valign='top'>maxResults</td><td width='405' valign='top'>Sets the maximum number of tracks displayed in the widget</td><td width='405' valign='top'>Any Integer value greater than zero</td></tr></tbody></table>";
+    carouselDefaultCode = "var amzn_wdgt={widget:'Carousel'}; amzn_wdgt.tag='freepayingsur-20'; amzn_wdgt.widgetType='Bestsellers'; amzn_wdgt.searchIndex='VideoGames'; amzn_wdgt.browseNode='51550011'; amzn_wdgt.title='New Video Game titles from Amazon'; amzn_wdgt.width='600'; amzn_wdgt.height='200'; amzn_wdgt.marketPlace='US'; ";
+    mp3DefaultCode = "var amzn_wdgt={widget:'MP3Clips'};amzn_wdgt.tag='freepayingsur-20'; amzn_wdgt.widgetType='ASINList';amzn_wdgt.ASIN='B0011Z0YR2,B00137W4P8,B0013G0PG4,B001AU8ZLK,B001AUCJZ8,B001AUEMDK,B001AU8YB6,B001AU8YBQ,B001AU8YCK,B001AUCK2U,B001AUEMFS,B001AUCK52,B001AU6XE6,B001AUEMH6';amzn_wdgt.title='What Ive been listening to lately...';amzn_wdgt.width='250';amzn_wdgt.height='250';amzn_wdgt.shuffleTracks='True';amzn_wdgt.marketPlace='US'; ";
+    eysDefaultCode = "var amzn_wdgt={widget:'MyFavorites'};amzn_wdgt.tag='freepayingsur-20'; amzn_wdgt.columns='1';amzn_wdgt.rows='3';amzn_wdgt.title='Henri-Cartier-Bresson: Photographer Extraordinaire';amzn_wdgt.width='250';amzn_wdgt.ASIN='0893817449,0500410607,050054199X,0500286426,0893818755,050054333X,0500543178,0945506562';amzn_wdgt.showImage='True';amzn_wdgt.showPrice='True';amzn_wdgt.showRating='True';amzn_wdgt.design='2';amzn_wdgt.colorTheme='Orange';amzn_wdgt.headerTextColor='#FFFFFF';amzn_wdgt.marketPlace='US'; ";
+    
+        searchDefaultCode = "amzn_assoc_ad_type='search'; amzn_assoc_tracking_id='freepayingsur-20'; amzn_assoc_columns='1'; amzn_assoc_rows='1'; amzn_assoc_default_search_key='10 mp 5x zoom'; amzn_assoc_search_index='Photo'; amzn_assoc_width='256'; amzn_assoc_show_image='true'; amzn_assoc_show_price='true'; amzn_assoc_show_rating='true'; amzn_assoc_theme='dark'; amzn_assoc_bg_color='000000'; amzn_assoc_region='US'; ";
+    
+    widget_source_widgets_available={"carousel":"Carousel Widget","eys":"My Favorites Widget","mp3":"MP3 Clips Widget","search":"Search Widget"};
+</script>
+
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/utils._V885305239_.js"></script>
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/website_popup._V885305239_.js"> </script>
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/submit_to_typepad._V885305239_.js"></script>
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/dojo_events._V885305239_.js"> </script>
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/json._V885305239_.js"></script>
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/widget_source._V885305239_.js"></script>
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/codemirror._V885305239_.js"></script>
+<link href="./Amazon.com widget - Widget Source_files/cp._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/theme4._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/global._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/home._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/box-styles._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/box-styles-1._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/ac-global-3._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/ac-global-elms-2._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/elegant._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/reports-1._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/wc-components._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/identbox._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/navigation._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/conf-widgets._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/buildWidgets._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/conf._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/conf-widgets-1._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/drop._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/ac-global._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/ac-global-elms._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/associates-main._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/dynamic-listbox._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/layout._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/tabs._V885305239_.css" rel="stylesheet" type="text/css">
+<link href="./Amazon.com widget - Widget Source_files/widget-gallery-table._V885305239_.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/log.js"> </script>
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/dojo._V885305239_.js"> </script>
+
+<form method="POST" action="http://www.blogger.com/add-widget" id="bloggerform">
+  <input type="hidden" name="widget.title" value="" id="bloggertitle">
+  <input type="hidden" name="widget.content" value="" id="bloggerinput">
+  <!--<input type="hidden" name="widget.template" value="&lt;data:content/&gt;" />-->
+  <!--<input type="hidden" name="infoUrl" value="" id="bloggerurl"/>-->
+  <!--<input type="hidden" name="logoUrl" value="" id="bloggerlogo"/>-->
+	<!--<input type="submit" name="go" value="Add to Blogger"/>-->
+</form>
+
+
+<form id="typepadform" action="https://www.typepad.com/t/app/weblog/design/widgets" method="post">
+  <input name="service_key" value="52616e646f6d49560f036ff6b5ce6b6c7ebd3c86b0153e4e48effb4e1dbb90dcce699d7ad30e9100" type="hidden">
+  <input name="service_name" value="Amazon Widgets" type="hidden">
+  <input name="service_url" value="" type="hidden" id="typepadurl">
+  <input name="long_name" value="" type="hidden" id="typepadtitle">
+
+  <input name="short_name" value="" type="hidden" id="typepadtitle2">
+  <input name="content" value="" type="hidden" id="typepadinput">
+  <input name="return_url" value="" type="hidden" id="typepadurl2">
+</form>
+
+
+<!--<script type="text/javascript" src="javascript/dojo-0.4.2-ajax/dojo.js"></script>-->
+<script type="text/javascript">
+var colorDesignPopUpTile = createPopupTile('Select a Color theme and then customize it to suit your Web page.');
+var contentLayoutPopUpTile = createPopupTile('You can choose to restrict search within a specific Amazon category or you can select "Show Drop Down" to allow your viewers to select the Amazon category');
+var previewPopUpTile = createPopupTile('This is how the widget will appear on your Web page or blog.');
+var defaultSearchTermHelpMsg = createPopupTile('If you specify a default search term, it will be used to filter products when the widget is first displayed');
+function hidecategorydropdown(){
+    dojo.byId('search_category_drop_id').style.visibility='hidden';
+}
+function showcategorydropdown(){
+    dojo.byId('search_category_drop_id').style.visibility='visible';
+    clearPopupCallbacksHelperMsg();// clear callbacks
+}
+function setupPopupCallbacksHelperMsg(){
+    clearPopupCallbacksHelperMsg();
+
+}
+function clearPopupCallbacksHelperMsg(){
+    _amzn_popup.onhide_callback=null;
+    _amzn_popup.onshow_callback=null;
+    delete(_amzn_popup.onhide_callback);
+    delete(_amzn_popup.onshow_callback);
+}
+
+function setupPopupCallbacksHelperMsgHideDD(){
+    clearPopupCallbacksHelperMsg();
+    if ( window.ActiveXObject) {
+        _amzn_popup.onshow_callback=hidecategorydropdown;
+        _amzn_popup.onhide_callback=showcategorydropdown;
+    }
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" language="javascript">
+    try {
+        if (!Object.prototype.hasOwnProperty) {
+            Object.prototype.hasOwnProperty = function(p) {
+                return typeof this[p] != "function";
+            }
+        }
+    } catch(e) {
+    }
+    isAmznWC = 1; //used by widgets UI for preview        
+    websiteMP = 'US';
+    locales = new Array();
+    vips = new Object();
+    country = new Array();
+    
+		vips['US'] = 'https://widgets.amazon.com';
+		country['US'] = 'United States';
+		locales[0] = "US";
+    
+		vips['GB'] = 'https://widgets.amazon.co.uk';
+		country['GB'] = 'United Kingdom';
+		locales[1] = "GB";
+    
+		vips['DE'] = 'https://widgets.amazon.de';
+		country['DE'] = 'Deutschland';
+		locales[2] = "DE";
+    
+		vips['FR'] = 'https://widgets.amazon.fr';
+		country['FR'] = 'France';
+		locales[3] = "FR";
+    
+		vips['JP'] = 'https://widgets.amazon.co.jp';
+		country['JP'] = 'Japan';
+		locales[4] = "JP";
+    
+		vips['CA'] = 'https://widgets.amazon.ca';
+		country['CA'] = 'Canada';
+		locales[5] = "CA";
+    
+		vips['CN'] = 'https://widgets.amazon.cn';
+		country['CN'] = 'China';
+		locales[6] = "CN";
+    
+		vips['IN'] = 'https://widgets.amazon.in';
+		country['IN'] = 'India';
+		locales[7] = "IN";
+    
+		vips['BR'] = 'https://widgets.amazon.com';
+		country['BR'] = 'Brazil';
+		locales[8] = "BR";
+    
+	
+    localeSelectPopUp = createLocaleDropDownBR(location.pathname);
+
+    if (_amzn_popup) {
+        _amzn_popup.init();
+    }
+    function setupCallbacks(){
+        if(typeof setupLocaleDropdownPopupCallbacks =="function"){
+            setupLocaleDropdownPopupCallbacks();
+        }
+    }
+</script><div id="amzn_popup_div"></div>
+
+
+
+<div id="header">
+    <div id="toplogo">
+        <a href="https://affiliate-program.amazon.com/" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/logosprite._V885305239_.gif);"></a>
+    </div>
+
+
+
+
+
+    
+        
+    
+
+    
+
+    <div id="toplinks">
+        <div id="locale_selector_selector" class="dynamic_listbox_selector" onmouseover="_a=this;setupCallbacks(); _amzn_popup.showpreview(localeSelectPopUp, _a, event,50);" onmouseout="_a=this;_amzn_popup.hide(_a)">
+            <img src="./Amazon.com widget - Widget Source_files/ddwn._V16965439_.png" width="11" class="dynamic_listbox_down_arrow" height="11" border="0">
+            <img src="./Amazon.com widget - Widget Source_files/clear-pixel._V46764889_.gif" width="1" class="dynamic_listbox_clear_pixel" height="1" border="0">
+            <div id="locale_selector_selector_content">
+            United States&nbsp;
+            </div>
+             </div>
+        <div class="toplinksText" style="float:right;">
+            
+            <a href="https://affiliate-program.amazon.com/gp/associates/network/your-account/main.html">Account Settings</a>&nbsp;|
+            
+             &nbsp;<a href="https://affiliate-program.amazon.com/gp/associates/help/main.html/">Help</a>&nbsp;
+            |&nbsp;<a href="https://affiliate-program.amazon.com/gp/associates/contact/?feedbackSource=WidgetCentral">Feedback</a>&nbsp;
+            |&nbsp;Select Locale:&nbsp;
+        </div>
+    
+
+        </div>
+
+<div style="clear:both;"></div>
+    <div id="menuh"><div id="primaryNav" style="background: url(&quot;https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/primaryNavBackground._V256371850_.gif&quot;) repeat-x bottom;"><ul><li style="visibility: hidden; height: 24px;"></li><li style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-right._V254531470_.gif) no-repeat scroll right top; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><a style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-left._V256370314_.gif) no-repeat scroll left top; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="https://affiliate-program.amazon.com/gp/associates/promo/buildlinks.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Links &amp; Banners <span class="droparrow">▼</span></a><div class="parent"><div class="dropdownlinks"><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/build-links/individual/main.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Product Links</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/build-links/banner/main.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Banner Links</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/build-links/text/main.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Link to Any Page</a></div><div class="subitem"><a href="https://widgets.amazon.com/Amazon-QuickLinker-Widget?store=freepayingsur-20&tag=freepayingsur-20">Quick Linker</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/tools/link-checker/main.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Link Checker</a></div></div></div></li><li style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-slected-right._V254531465_.gif);" id="current"><a style="float: left; background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-slected-left._V255796384_.gif);" href="https://widgets.amazon.com/?store=freepayingsur-20&tag=freepayingsur-20">Widgets</a></li><li style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-right._V254531470_.gif) no-repeat scroll right top; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><a style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-left._V256370314_.gif) no-repeat scroll left top; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="https://affiliate-program.amazon.com/gp/associates/network/store/main.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">aStore</a></li><li style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-right._V254531470_.gif) no-repeat scroll right top; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><a style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-left._V256370314_.gif) no-repeat scroll left top; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Product Advertising API</a></li><li style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-right._V254531470_.gif) no-repeat scroll right top; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><a style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-left._V256370314_.gif) no-repeat scroll left top; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="https://affiliate-program.amazon.com/gp/associates/promo/affiliate-programs.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Affiliate Programs <span class="droparrow">▼</span></a><div class="parent"><div class="dropdownlinks"><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/promo/amazonsupply.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Amazon Supply Associates</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/promo/amazonlocal.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Amazon Local Associates</a></div></div></div></li><li style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-right._V254531470_.gif) no-repeat scroll right top; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><a style="background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/associates/network/08-ui-elements/tab-unslected-left._V256370314_.gif) no-repeat scroll left top; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="https://affiliate-program.amazon.com/gp/associates/network/reports/main.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Reports <span class="droparrow">▼</span></a><div class="parent"><div class="dropdownlinks"><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/reports/report.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20&ie=UTF-8&reportType=earningsReport">Earnings Report</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/reports/report.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20&ie=UTF-8&reportType=ordersReport">Orders Report</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/reports/report.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20&ie=UTF-8&reportType=miscReport">Misc. Referrals</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/reports/report.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20&ie=UTF-8&reportType=linkTypeReport">Link-Type Report</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/reports/report.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20&ie=UTF-8&reportType=trendsReport">Daily Trends</a></div><div class="subitem"><a href="https://affiliate-program.amazon.com/gp/associates/network/reports/report.html?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20&ie=UTF-8&reportType=tagsReport">Tracking ID Summary Report</a></div></div></div></li></ul></div></div>
+    
+
+
+
+
+<script type="text/javascript">
+    var Associates = Associates || {};
+    Associates.WebAnalyticsConfig = {
+        urchinUdn : ".amazon.com",
+        eventTrackingPathPrefix : "JSAnalytics",
+        urchinJSPath : "https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc/website/webanalytics/urchin._V885305239_.js"
+    };
+</script>
+<script type="text/javascript" src="./Amazon.com widget - Widget Source_files/webanalytics._V885305239_.js"></script>
+<script type="text/javascript">
+  if(typeof Associates.WebAnalytics.logCustomSegment == 'function') {
+        Associates.WebAnalytics.logCustomSegment('freepayingsur-20');
+    }
+</script>
+
+
+</div>
+
+
+<div style="clear:both;">
+    <div id="navigation" class="secure">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//    global vars for holding current store id and tracking id,if user is logged in these vars are updated below
+    var current_store_id='widgetsamazon-20';
+    var current_tracking_id='widgetsamazon-20';
+
+</script>
+<div id="identitybox" class="boxFill secure">
+<div class="whiteBox leftColBox">
+      <!-- Rounded corner graphics starts here -->
+      <div class="corner upperLeft" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxUpperLeft._V885305239_.gif );"></div>
+      <div class="corner upperRight" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxUpperRight._V885305239_.gif);"></div>
+      <div class="corner lowerLeft" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxLowerLeft._V885305239_.gif);"></div>
+      <div class="corner lowerRight" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxLowerRight._V885305239_.gif);"></div>
+
+              
+            
+
+            <!--sign out form-->
+            <form id="form2" name="form1" method="post" action="https://affiliate-program.amazon.com/gp/flex/associates/sign-out.html" style="margin-bottom: 6px;">
+
+                   <input type="hidden" name="action" value="sign-out">
+              </form>
+            <!--sign out form end-->
+                <script language="Javascript" type="text/javascript">
+                    var store_trackingId_map = new Array;
+                    
+                    store_trackingId_map['freepayingsur-20']=new Array;
+                    
+                        store_trackingId_map['freepayingsur-20'][0]='freepayingsur-20';
+                        
+        function updateLoginVars() {
+            var storeId=document.getElementById("store_id_select").value;
+            current_store_id=storeId;
+            if(store_trackingId_map[storeId].length>1){
+                current_tracking_id = document.getElementById("tracking_id_select_inner").value;
+            } else {
+                current_tracking_id=store_trackingId_map[storeId][0];
+            }
+        }
+        function getURL(current_store, current_tracking_id, default_store, default_tracking_id, remove_widgetid){
+            var existingParams = document.location.search;
+            var value=new Object;
+            if(existingParams && existingParams.length>1){
+                existingParams=existingParams.substr(1,existingParams.length);
+                var keyvalPairs=existingParams.split("&");
+                for(var i=0; i<keyvalPairs.length; i++){
+                    if(keyvalPairs[i]){
+                        var part=keyvalPairs[i].split("=",2);
+                        if(part && part.length==2){
+                            value[part[0]]=part[1];
+                        }
+                    }
+                }
+            }
+            if(remove_widgetid){
+            delete value["widget_id"];
+            }
+            if(current_store){
+                value["store"]=current_store;
+            }else{
+                delete value["store"];
+            }
+            if(current_tracking_id){
+                value["tag"]=current_tracking_id;
+            }else{
+                delete value["tag"];
+            }
+            var url=document.location.pathname+"?";
+            var first=true;
+            for(var i in value){
+                if(!value.hasOwnProperty(i))continue;
+                if(first){first=false;}else{url+="&";}
+                url+=i+"="+value[i]; //since we didnt decode it, we need not encode it
+            }
+            return url;
+        }
+        function updateCurrentTrackingId() {
+            updateLoginVars();
+            
+            
+            var url=getURL(current_store_id, current_tracking_id, "freepayingsur-20","freepayingsur-20")+"&o=1";
+
+        document.location.replace(url);
+        }
+        function updateTrackingIds() {
+            var placeHolder = document.getElementById("tracking_id_select");
+            var storeId = document.getElementById("store_id_select").value;
+            var url=getURL(storeId, null, "freepayingsur-20","freepayingsur-20",true);
+        document.location.replace(url);//TODO: remove widget_id from here
+//            document.location.replace("/Widget-Source?store="+storeId); 
+        }
+</script>
+
+
+              <div class="left-float">Signed in as  </div>
+              
+      <form name="authPortalLogout" id="authPortalLogout" method="POST" action="https://www.amazon.com/ap/signin">
+                    <input type="hidden" name="openid.assoc_handle" value="amzn_associates_us">
+                    <input type="hidden" name="openid.ns" value="http://specs.openid.net/auth/2.0">
+                    <input type="hidden" name="openid.mode" value="logout">
+                    <input type="hidden" name="openid.return_to" value="https://widgets.amazon.com/Widget-Source/?logOutRequest=1">
+      </form>
+      <div class="right-float"><a href="" style="cursor:pointer;" onclick="document.getElementById(&#39;authPortalLogout&#39;).submit();return false;">sign out</a></div>
+              
+                
+                    <input type="hidden" id="store_id_select" value="freepayingsur-20">
+                    <span style="white-space:nowrap;"><strong>freepayingsur-20 </strong></span>
+                    
+
+                <script type="text/javascript">
+                    
+                    current_store_id='freepayingsur-20';
+                    current_tracking_id='freepayingsur-20';
+                </script>
+            <div class="line"></div>
+                  <div class="left-float">Tracking Id</div>
+                  <div class="right-float"><a href="https://affiliate-program.amazon.com/gp/associates/network/your-account/manage-tracking-ids.html/">manage</a></div>
+
+                  <div id="tracking_id_select" style="width:160px;">
+                      
+                      
+                    <strong>freepayingsur-20</strong>
+                    <input type="hidden" id="tracking_id_select_inner" value="freepayingsur-20">
+                     
+              </div>
+
+              
+
+ </div>
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="whiteBox leftColBox"><div class="corner upperLeft" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxUpperLeft._V885305239_.gif);"></div><div class="corner upperRight" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxUpperRight._V885305239_.gif);"></div><div class="corner lowerLeft" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxLowerLeft._V885305239_.gif);"></div><div class="corner lowerRight" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxLowerRight._V885305239_.gif);"></div><ul class="whiteBox leftColBox nav"><li><a href="https://widgets.amazon.com/?&store=freepayingsur-20&tag=freepayingsur-20">Widgets</a><ul><li><a href="https://widgets.amazon.com/?category=Picks&store=freepayingsur-20&tag=freepayingsur-20">Your Picks</a></li><li><a href="https://widgets.amazon.com/?category=Digital&store=freepayingsur-20&tag=freepayingsur-20">Digital Media</a></li><li><a href="https://widgets.amazon.com/?category=Search&store=freepayingsur-20&tag=freepayingsur-20">Search</a></li><li><a href="https://widgets.amazon.com/?category=Contextual&store=freepayingsur-20&tag=freepayingsur-20">Contextual</a></li><li><a href="https://widgets.amazon.com/?category=Flash&store=freepayingsur-20&tag=freepayingsur-20">Flash</a></li><li><a href="https://widgets.amazon.com/?category=Other&store=freepayingsur-20&tag=freepayingsur-20">Other Widgets</a></li><li style="border-top: 1px dashed rgb(204, 204, 204);"><a href="https://widgets.amazon.com/My-Widgets?store=freepayingsur-20&tag=freepayingsur-20">My Widgets</a></li><a class="selected" href="https://widgets.amazon.com/Widget-Source?store=freepayingsur-20&tag=freepayingsur-20">Widget Source</a><a href="https://widgets.amazon.com/Widgets-By-Size?store=freepayingsur-20&tag=freepayingsur-20">Search by Size</a></ul></li></ul></div><div id="amabotACLinkNavigationPane" class="whiteBox leftColBox supportBox"><div class="corner upperLeft" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxUpperLeft._V885305239_.gif);"></div><div class="corner upperRight" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxUpperRight._V885305239_.gif);"></div><div class="corner lowerLeft" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxLowerLeft._V885305239_.gif);"></div><div class="corner lowerRight" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxLowerRight._V885305239_.gif);"></div>
+
+<h4>Promotions Hub</h4>
+<ul>
+  <li><a href="https://affiliate-program.amazon.com/gp/associates/microsite/offers?redirect=true&utm_medium=grp015&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&utm_source=ac&utm_campaign=nohol&pf_rd_i=assoc_join_menu&utm_content=ac-nav&ie=UTF8&pf_rd_t=501"> Offers - Deals &amp; Promotions</a></li>
+<li><a href="https://affiliate-program.amazon.com/gp/associates/network/promo-hub/promo.html?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&showResultsInTab=bounty&pf_rd_t=501&pf_rd_i=assoc_join_menu">New - Special Bounties </a></li>
+  <li><a href="https://affiliate-program.amazon.com/gp/associates/help/t67?redirect=true&utm_medium=primeweb&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&utm_source=web&utm_campaign=AC%20&pf_rd_i=assoc_join_menu&utm_content=ongoing&pf_rd_t=501">Amazon Trade-in Program</a></li>
+</ul>
+<h4>Mobile</h4>
+<ul>
+<li><a href="https://affiliate-program.amazon.com/gp/associates/promo/mobile-education.html?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu"> Mobile Education Center </a></li>
+</ul>
+<h4>Stay Connected</h4>
+<ul>
+  <li><a href="https://affiliate-program.amazon.com/gp/associates/network/boards/main.html?redirect=false&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Discussion Boards</a></li>
+  <li><a href="http://affiliate-blog.amazon.com/?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Associates Blog</a></li>
+</ul>
+<h4>Customer Support</h4>
+<ul>
+  <li><a href="https://affiliate-program.amazon.com/gp/associates/help/main.html?redirect=false&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Help</a></li>
+  <li><a href="https://affiliate-program.amazon.com/gp/associates/tips/main.html?redirect=false&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Performance Tips</a></li>
+  <li><a href="https://affiliate-program.amazon.com/gp/associates/help/glossary?redirect=false&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Glossary</a></li>
+  <li><a href="https://affiliate-program.amazon.com/gp/associates/agreement?redirect=false&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Operating Agreement</a></li>
+<li><a href="https://affiliate-program.amazon.com/gp/associates/help/operating/exclusions?redirect=false&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Excluded Products</a></li>
+</ul>
+<h4>Special Programs</h4>
+<ul>
+<li><a href="http://www.amazonservices.com/content/sell-on-amazon.htm?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&ld=AOAssociatesHm&pf_rd_t=501&pf_rd_i=assoc_join_menu">Sell on Amazon</a></li>
+  <li><a href="https://affiliate-program.amazon.com/kindle?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Kindle for Associates</a></li>
+  <li><a href="https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html?redirect=false&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Product Advertising API</a></li>
+  <li><a href="https://vendorcentral.amazon.com/?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">Vendors &amp; Publishers</a></li>
+  <li><a href="http://webstore.amazon.com/?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&ld=ACLN&pf_rd_t=501&pf_rd_i=assoc_join_menu">Amazon WebStore</a></li>
+<li><a href="http://www.amazonservices.com/content/product-ads-associates.htm?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&ld=AOPADSAC&pf_rd_t=501&pf_rd_i=assoc_join_menu">Amazon Product Ads</a></li>
+</ul>
+<h4>Other Affiliate Programs</h4>
+<ul>
+  <li><a href="http://www.audible.com/adbl/store/affiliatesNew/index.jsp?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&Type=AffiliatePage&BV_UseBVCookie=Yes&pf_rd_t=501&pf_rd_i=assoc_join_menu">Audible.com</a></li>
+  <li><a href="http://www.abebooks.com/books/AffiliateProgram?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-right-1&pf_rd_t=501&pf_rd_i=assoc_join_menu">AbeBooks.com</a></li>
+</ul>
+</div>
+
+    </div>
+    <div id="mainContentWrap">
+        <table cellspacing="0" cellpadding="0" border="0" width="100%" height="100%">
+        <tbody><tr>
+            <td style="padding-right:14px"><div class="whiteBox">
+                  <div class="corner upperLeft" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxUpperLeft._V885305239_.gif );"></div>
+                  <div class="corner upperRight" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/whiteBoxUpperRight._V885305239_.gif);"></div>
+            <div id="content">
+            <div class="breadcrumb">
+            <a href="https://affiliate-program.amazon.com/?idbox_store_id=freepayingsur-20&idbox_tracking_id=freepayingsur-20">Home</a>&nbsp;›&nbsp;<a href="https://widgets.amazon.com/?store=freepayingsur-20&tag=freepayingsur-20">Widgets</a>&nbsp;›&nbsp;
+            </div>
+    
+
+    <h1 class="mainpage">Widget Source</h1>
+
+    <div class="BlueWireBox" style="margin: 2em 0px 14px 2em; width: 200px; height: 95%; float: right;">
+        <div class="corner upperLeft" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/blueStripeBoxUpperLeft._V885305239_.gif);"></div>
+        <div class="corner upperRight" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/blueStripeBoxUpperRight._V885305239_.gif);"></div>
+        <div class="corner lowerLeft" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/blueStripeBoxLowerLeft._V885305239_.gif);"></div>
+        <div class="corner lowerRight" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/blueStripeBoxLowerRight._V885305239_.gif);"></div>
+      
+      <div class="f7">Why use Widget Source?</div>
+        <div class="managedContent">
+            <div class="unified_widget rcmBody">
+                <ul>
+                    <li style="margin-left: -1.5em">Create multiple widgets easily</li>
+                    <li style="margin-left: -1.5em">Build cool mashups with other web services</li>
+                    <li style="margin-left: -1.5em">Integrate widgets with your web site experience</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="managedContent" style="clear: none;">
+        <div class="unified_widget rcmBody">
+            <h2>What is Widget Source?</h2>
+            <p>Widget Source is a new way to create Amazon Widgets in-code.</p><p>Until now, the only way for you to create a widget was by using our WYSIWYG widget editor in Associates Central. If you wanted to create a large number of widgets, it was tedious to build each widget by hand.</p><p>Using Widget Source, you can now create widgets programmatically and embed them anywhere on your site.  Widget Source gives you complete programmatic control over the widget look-and-feel and provides you with multiple ways to add products to the widget.
+                <a href="https://affiliate-program.amazon.com/gp/associates/help/t40/">Learn more</a>
+            </p>
+         </div>
+    </div>
+    <div class="managedContent" style="clear: none;">
+        <div class="unified_widget rcmBody">
+            <h2>How do I use Widget Source?</h2>
+            <ol type="1" start="1">
+
+                <li>
+                    <form id="form1" action="" method="post" name="form1">
+                        <p>
+                             <label>
+                                Choose a Widget:
+                                <select id="widget_selector" name="select" onchange="updateWidgetCode();updateWidgetParamsTable();updateLearnMore();">
+                                    <!--<option value="carousel">Carousel Widget</option>
+                                    <option value="eys">My Favorites Widget</option>
+                                    <option value="mp3">MP3 Clips Widget</option>
+                                    <option value="search">Search Widget</option>-->
+                                <option value="carousel">Carousel Widget</option><option value="eys">My Favorites Widget</option><option value="mp3">MP3 Clips Widget</option><option value="search">Search Widget</option></select>
+                                <script type="text/javascript">
+                                        var option;
+                                        for(widget in widget_source_widgets_available){
+                                                if(!widget_source_widgets_available.hasOwnProperty(widget))continue;
+                                                option = document.createElement("option");
+                                                option.value = widget;
+                                                option.text = widget_source_widgets_available[widget];
+                                                document.getElementById("widget_selector").options.add(option);
+
+                                        }
+                                </script>
+                                <span id="carousel_learnmore" style=""><a href="https://affiliate-program.amazon.com/gp/associates/help/t41/">Learn more</a> about the selected widget.</span>
+                                <span id="mp3_learnmore" style="display:none"><a href="https://affiliate-program.amazon.com/gp/associates/help/t42/">Learn more</a> about the selected widget.</span>
+                                <span id="eys_learnmore" style="display:none"><a href="https://affiliate-program.amazon.com/gp/associates/help/t43/">Learn more</a> about the selected widget.</span>
+                                <span id="search_learnmore" style="display:none"><a href="https://affiliate-program.amazon.com/gp/associates/help/t44/">Learn more</a> about the selected widget.</span>
+                            </label>
+                        </p>
+                    </form>
+                </li>
+                <li>
+                    <p>
+                        Modify the widget source template by adding/changing parameter key/value pairs. For a complete list of applicable parameters, refer to the 'List of Parameters' table below. Click the 'Update Preview' button to see a preview of the widget after you modify the widget template.
+                    </p>
+                    <h4 class="f7">Widget Source Template</h4>
+                    <form id="form2" action="" method="post" name="form2">
+                        <iframe src="javascript:false;" style="width: 760px; height: 200px; display: block;"></iframe>
+                    </form>
+                    <textarea id="holdtext" style="display:none;"></textarea>
+                    <div></div>
+                    <table>
+                        <tbody><tr>
+                            <td>
+                                <img onclick="showPreview();" style="cursor: pointer" src="./Amazon.com widget - Widget Source_files/preview-md-sec._V885305239_.gif">
+                            </td>
+                            <td>
+                                <img onclick="Associates.WebAnalytics.trackEvent(window.location.pathname, Associates.WebAnalyticsConfig.eventTrackingPathPrefix, &#39;CopyCode&#39;); copyToClipboard();" style="cursor: pointer;" src="./Amazon.com widget - Widget Source_files/copy-code-md-sec-copy._V885305239_.gif">
+                            
+                            </td>
+                            <td>
+                                <div id="copy_text" style="color:white;vertical-align:middle;display : table-cell;padding-bottom:6px;">Copied</div>
+                            </td>
+
+                            
+                             
+                            <td>
+                                <div style="color:white;padding-left:400px;padding-right:0px;">padding</div>
+                            </td>
+
+                             
+
+                            <td>
+                                <img onclick="confirmation();" style="cursor: pointer;" src="./Amazon.com widget - Widget Source_files/reset-md-sec-copy-2._V885305239_.gif"> 
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <h4 class="f7">Preview</h4>
+                    <div id="preview_section"><script>
+var amzn_wdgt={widget:'Carousel'}
+ amzn_wdgt.tag='freepayingsur-20';
+ amzn_wdgt.widgetType='Bestsellers';
+ amzn_wdgt.searchIndex='VideoGames';
+ amzn_wdgt.browseNode='51550011';
+ amzn_wdgt.title='New Video Game titles from Amazon';
+ amzn_wdgt.width='600';
+ amzn_wdgt.height='200';
+ amzn_wdgt.marketPlace='US';</script><script src="./Amazon.com widget - Widget Source_files/swfobject_1_5.js"></script></div>
+                    <div class="conf-outer-wrap-source">
+                        <div class="conf-inner-wrap" style="background: rgb(240, 240, 240) none repeat scroll 0%; text-align: center; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                            <center>
+                            <div id="preview_section_demo"><embed type="application/x-shockwave-flash" src="//ws-na.amazon-adsystem.com/widgets/q?MarketPlace=US&amp;Operation=GetDisplayTemplate&amp;ServiceVersion=20070822&amp;WS=1&amp;ID=Carousel&amp;panda=1" width="600" height="200" style="undefined" id="amzn_widget" name="amzn_widget" quality="high" bgcolor="#FFFFFF" allowscriptaccess="always" tojsonstring="function (){
+var a=[" {"],b,k,v;="" function="" p(s){="" if(b){="" a.push(",");="" }="" a.push(k.tojsonstring(),":",s);="" b="true;" for(k="" in="" this){="" if(this.hasownproperty(k)){="" v="this[k];" switch(typeof="" v){="" case="" "object":="" if(v){="" if(typeof="" v.tojsonstring="==&quot;function&quot;){" p(v.tojsonstring());="" }else{="" p("null");="" break;="" "string":="" "number":="" "boolean":="" a.push("}");="" return="" a.join("");="" }"="" flashvars="MarketPlace=US&amp;Operation=GetDisplayTemplate&amp;ServiceVersion=20070822&amp;WS=1&amp;ID=Carousel&amp;panda=1&amp;Tag=freepayingsur-20&amp;WidgetType=Bestsellers&amp;SearchIndex=VideoGames&amp;BrowseNode=51550011&amp;Title=New%20Video%20Game%20titles%20from%20Amazon&amp;Width=600&amp;Height=200"></div>
+                                </center>
+                        </div>
+                        <div style="clear:both; visibility:hidden;"></div>
+                    </div>
+                    <h4 class="f7">List of Parameters</h4>
+                    <!--<p/>-->
+                    <script type="text/javascript">
+                        function confirmation(){
+                                alertString = 'You will lose all changes to the code Are you sure you want to reset?';
+                                alertString = alertString.replace(/Are/,"\nAre");
+                                var response = confirm(alertString);
+	                            if (response){
+                                    updateWidgetCode();
+                                }
+                                else{
+                                }
+                      }
+                    </script>
+                    <div id="paramsTable"><table class="elegant" width="100%" cellspacing="0" cellpadding="0" border="0" style="width: 600px;"><tbody><tr><th width="166" valign="top">Parameter</th><th width="405" valign="top">Description</th><th width="405" valign="top">Valid values</th></tr><tr><td width="166" valign="top">tag</td><td width="166" valign="top">Your Associate id</td><td width="166" valign="top">e.g. widgetsamazon-20</td></tr><tr><td width="166" valign="top">width</td><td width="166" valign="top">Widget width in pixels</td><td width="166" valign="top" rowspan="2">Valid combinations of Width x Height are: 120x500, 160x600, 400x150, 500x175, 600x200</td></tr><tr><td width="166" valign="top">height</td><td width="166" valign="top">Widget height in pixels</td></tr><tr><td width="166" valign="top">title</td><td width="405" valign="top">Widget title</td><td width="405" valign="top">String value up to 60 characters long</td></tr><tr><td width="166" valign="top">widgetType</td><td width="405" valign="top">Determines how products will be added to your Carousel. <a href="https://affiliate-program.amazon.com/gp/associates/help/t41/a1">Learn More.</a></td><td width="405" valign="top">Valid values include:<br>ASINList<br>SearchAndAdd<br>Bestsellers<br>NewReleases<br>MostWishedFor<br>MostGifted</td></tr><tr><td width="166" valign="top">searchIndex</td><td width="405" valign="top">Determines the Amazon category used for adding products to the widget. Not applicable when WidgetType='ASINList'<br><a href="https://affiliate-program.amazon.com/gp/associates/help/t41/a5">What is a Search Index?</a></td><td width="405" valign="top">Any valid Amazon SearchIndex. <a href="https://affiliate-program.amazon.com/gp/associates/help/t41/a5">Click here</a> for a list of valid SearchIndex values</td></tr><tr><td width="166" valign="top">browseNode</td><td width="405" valign="top">Determines the Amazon sub-category used for adding products to the widget. Not applicable when WidgetType='ASINList'<br><a href="https://affiliate-program.amazon.com/gp/associates/help/t41/a6">What is a Browse Node?</a></td><td width="405" valign="top">Any valid Amazon BrowseNodeId. <a href="https://affiliate-program.amazon.com/gp/associates/help/t41/a6">Click here</a> for a list of valid BrowseNode values</td></tr><tr><td width="166" valign="top">ASIN</td><td width="405" valign="top">Comma-separated list of ASINs that will be added to the widget. Only applicable when WidgetType='ASINList'</td><td width="405" valign="top">All valid Amazon ASINs</td></tr><tr><td width="166" valign="top">keywords</td><td width="405" valign="top">Search keyword used when WidgetType='SearchAndAdd'.</td><td width="405" valign="top">Any string value</td></tr><tr><td width="166" valign="top">shuffleProducts</td><td width="405" valign="top">Set to True if you want the widget to show products in a random order each time it is displayed</td><td width="405" valign="top">True, False</td></tr><tr><td width="166" valign="top">showBorder</td><td width="405" valign="top">Set to True if you want a black border around the widget</td><td width="405" valign="top">True, False</td></tr></tbody></table></div>
+                    <div id="style_table" style="display: none;">
+                    <p>The look-and-feel of your widget is determined by the list of parameters below. You can choose a preset Design and Color theme by specifying the Design and ColorTheme parameters. You can also modify an existing theme by specifying the override parameters associated with each Design.</p>
+                    <p>
+                    </p><table width="100%" border="0" cellspacing="0" cellpadding="0" class="elegant" style="width:600px;">
+                                    <tbody><tr>
+                                      <th>design</th>
+                                      <th>colorTheme</th>
+                                      <th colspan="2">Overrides</th>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="7">1</td>
+                                      <td rowspan="7"><strong>Blues</strong><br>Pistachio<br>RedGrey<br>Pink<br>Pumpkin</td>
+                                      <th><strong>Parameter</strong></th>
+                                      <th><strong>Values</strong></th>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">outerBackgroundColor</td>
+                                      <td width="189" rowspan="5" valign="top">Any hex color value (i.e. #CC6600)</td>
+
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">innerBackgroundColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">headerTextColor</td>
+                                    </tr>
+                                    <tr>
+
+                                      <td valign="top" width="189">linkedTextColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">bodyTextColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">roundedCorners</td>
+
+                                      <td valign="top" width="189">True, False</td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="7">2</td>
+                                      <td rowspan="7"><strong>Default</strong><br>Blue<br>Grey<br>Orange<br>Pink<br>White</td>
+                                      <th valign="top" width="189"><strong>Parameter</strong></th>
+                                      <th valign="top" width="189"><strong>Values</strong></th>
+                                    </tr>
+
+                                    <tr>
+                                      <td valign="top" width="189">outerBackgroundColor</td>
+                                      <td width="189" rowspan="6" valign="top">Any hex color value (i.e. #CC6600)</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">backgroundColor</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td valign="top" width="189">borderColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">headerTextColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">linkedTextColor</td>
+
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">bodyTextColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="4">3</td>
+                                      <td rowspan="4">Cinnamon<br><strong>Peppermint</strong><br>Spearmint</td>
+                                      <th valign="top" width="189"><strong>Parameter</strong></th>
+                                      <th valign="top" width="189"><strong>Values</strong></th>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">headerTextColor</td>
+
+                                      <td width="189" rowspan="3" valign="top">Any hex color value (i.e. #CC6600)</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">linkedTextColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">bodyTextColor</td>
+
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="4">4</td>
+                                      <td rowspan="4"><strong>Onyx</strong><br>Cobalt<br>Ruby</td>
+
+                                      <th valign="top" width="189"><strong>Parameter</strong></th>
+                                      <th valign="top" width="189"><strong>Values</strong></th>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">headerTextColor</td>
+                                      <td width="189" rowspan="3" valign="top">Any hex color value (i.e. #CC6600)</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td valign="top" width="189">linkedTextColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">bodyTextColor</td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="4">5</td>
+
+                                      <td rowspan="4"><strong>BrushedSteel</strong><br>BrushedNickel<br>BrushedCopper</td>
+                                      <th valign="top" width="189"><strong>Parameter</strong></th>
+                                      <th valign="top" width="189"><strong>Values</strong></th>
+                                    </tr>
+
+                                    <tr>
+                                      <td valign="top" width="189">headerTextColor</td>
+                                      <td width="189" rowspan="3" valign="top">Any hex color value (i.e. #CC6600)</td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" width="189">linkedTextColor</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td valign="top" width="189">bodyTextColor</td>
+                                    </tr>
+                                  </tbody></table>
+                    </div>
+                </li>
+                <li>
+                    <p>Embed the completed widget code on your web site.</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <script type="text/javascript" xml:space="preserve">        
+        updateWidgetCode();
+        updateWidgetParamsTable();        
+    </script>
+      </div>
+      <div class="feedback"><p><strong>What do you think? </strong></p><p>
+Are there any missing configuration options or would you like to request a feature? <a href="https://affiliate-program.amazon.com/gp/associates/contact/?feedbackSource=Build%20Your%20Amazon%20Widgets">Let us know</a>.</p> </div>
+      <div class="corner lowerLeft" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/tanBoxLowerLeft._V885305239_.gif );"></div>
+      <div class="corner lowerRight" style="background-image:url(https://images-na.ssl-images-amazon.com/images/G/01/associates/widgets/wc//website/img/tanBoxLowerRight._V885305239_.gif);"></div>
+      </div>
+      </td>
+              </tr>
+            </tbody></table>
+     <div id="footer"><p><a href="http://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=508088" target="_blank">Conditions of Use</a> | <a href="http://www.amazon.com/gp/help/customer/display.html?ie=UTF8&nodeId=468496" target="_blank">Privacy Notice</a> © 1996-2011, Amazon.com, Inc. and its affiliates.</p><p>
+
+<a href="http://www.twitter.com/AmazonAssociate?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-center-1&pf_rd_t=501&pf_rd_i=assoc_footer"><img src="./Amazon.com widget - Widget Source_files/twitter-icon.gif" alt="Twitter" align="center" border="0"></a> <a href="http://www.twitter.com/AmazonAssociate?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-center-1&pf_rd_t=501&pf_rd_i=assoc_footer">Follow us on Twitter</a>
+ | 
+<a href="http://www.facebook.com/pages/Amazon-Associates/127498263343?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-center-1&pf_rd_t=501&pf_rd_i=assoc_footer"><img src="./Amazon.com widget - Widget Source_files/facebook-icon.png" alt="Facebook" align="center" border="0"></a>
+ <a href="http://www.facebook.com/pages/Amazon-Associates/127498263343?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-center-1&pf_rd_t=501&pf_rd_i=assoc_footer">Friend us on Facebook</a>
+ | 
+<a href="http://www.linkedin.com/groups?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-center-1&gid=1704967&pf_rd_t=501&pf_rd_i=assoc_footer"><img src="./Amazon.com widget - Widget Source_files/linkedin-icon.png" alt="LinkedIn" align="center" border="0"></a> <a href="http://www.linkedin.com/groups?redirect=true&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=assoc-center-1&gid=1704967&pf_rd_t=501&pf_rd_i=assoc_footer">Join us on Linkedin</a>
+
+</p></div>
+      </div>
+    </div>
+<script>
+//dojo.addOnLoad(onLoad);
+</script>
+
+
+
+
+
+</body></html>

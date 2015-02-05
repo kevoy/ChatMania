@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="chatmain.css" />
+		<style type="text/css">
+			#rbJordan{
+				background: url('images/avatars/chef-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#rbMike{
+				background: url('images/avatars/cop-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#newUser{
+				background: url('images/avatars/cop-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#rbSasha{
+				background: url('images/avatars/cowboy-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#rbMichelle{
+				background: url('images/avatars/doctor-icon.png');
+				background-size: cover;
+				background-position: center center;
+			}
+			#welcomeNav{
+				background: url('images/IMG_1733_rt.jpg') no-repeat;
+				background-position:center center;
+				background-size: cover;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id='topNav'>
+			<div id='siteTilleHolder'>
+				<h1 id='siteTile'>Chat <span id='st1'>Mania</span></h1>
+			</div>
+			<div id='topLinksHolder'>
+				<ul>
+					<li>HOME</li>
+					<li>ABOUT</li>
+					<li>CONTACT</li>
+				</ul>
+			</div>
+		</div>
+		<div id='welcomeNav'>
+			<div id='welcomeRight'>
+				<h2 id='wrTitle'>HOME AND FAMILY</h2>
+				<a id="wrText">Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit.<br><span id='dots'>...</span></a>
+			</div>
+		</div>
+		<div id='bottomNav'>
+		</div>
+		<div id='main'>
+			<div id='rightBar'>
+				<div id='formInfo'>
+					<h2 id='formName'>Enter Your Name and Start Chatting</h2>
+					<div class='formBox'>
+						<div id="newUser" class="recentUserBoxImage">
+						</div>
+						<input type='text' id='newUserName' value='ENTER YOUR NAME' onclick='if(this.value=="ENTER YOUR NAME"){this.value=""};' onblur='if(this.value==""){this.value="ENTER YOUR NAME"}' >
+					</div>
+					<div class='formBox'>
+						<a class='formText'>I AM A:</a>
+						<input class='radiobox' type='radio' value='male' id='male' name='sex' checked ><a class='radioText'>MALE</a>
+						<input class='radiobox' type='radio' value='female' id='female' name='sex' ><a class='radioText'>FEMALE</a>
+					</div>
+					<h2 id='startBtn'>START CHATTING</h2>
+				</div>
+			</div>
+			<div id='leftBar'>
+				<h2>Most Recent Users</h2>
+				<div id="leftBarBottom">
+					<div class="recentUserBox">
+						<div id="rbJordan" class="recentUserBoxImage">
+						</div>
+						<a class="recentUserBoxName">Jordan</a>
+					</div>
+					<div class="recentUserBox">
+						<div id="rbMike" class="recentUserBoxImage">
+						</div>
+						<a class="recentUserBoxName">Mike</a>
+					</div>
+					<div class="recentUserBox">
+						<div id="rbSasha" class="recentUserBoxImage">
+						</div>
+						<a class="recentUserBoxName">Sasha</a>
+					</div>
+					<div class="recentUserBox">
+						<div id="rbMichelle"  class="recentUserBoxImage">
+						</div>
+						<a class="recentUserBoxName">Michelle</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

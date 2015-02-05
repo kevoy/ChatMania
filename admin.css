@@ -1,0 +1,568 @@
+body{
+	margin: 0px 0px 0px 0px;
+	min-width: 1004px;
+}
+#header-menu{
+	display:block;
+	float:left;
+	width:100%;
+	height:50px;
+	background-color: #25313e;
+}
+#bottom{
+	display:block;
+	float:left;
+	width: 100%;
+	min-height: 650px;
+	background-color: #f3f3f3;
+}
+#left-menu{
+	display:block;
+	float:left;
+	width:230px;
+	min-height:650px;
+	background-color: #37485A;
+}
+#main-display{
+	display: block;
+	margin-left: 230px;
+	min-height: 650px;
+	
+}
+#site-title{
+	display: block;
+	float: left;
+	background-color: #fb6b5b;
+	margin-top: 0px;
+	margin-left: 0px;
+	height: 100%;
+	width: 230px;
+	text-align: center;
+	line-height: 50px;
+	color:white;
+	font-family: Courier;
+}
+ul#drop-down{
+	display:inline-block;
+	color:white;
+	position: relative;
+	float: right;
+	list-style-type: none;
+	font-family: Courier;
+	line-height: 50px;
+	margin-top: 0px;
+	margin-right: 50px;
+	height: 100%;
+	cursor: pointer;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	transition:all ease-in-out 0.4s;
+
+}
+li#admin-name{
+	
+}
+li ul#drop-info{
+	display:hidden;
+	position: absolute;
+	top:-100px;
+	left: 0px;
+	color: black;
+	opacity: 0;
+	font-family: Tahoma;
+	font-size: 12px;
+	width: 100%;
+	list-style-type: none;
+	background-color: white;
+	box-shadow: 1px 2px 2px #DDCECE;
+	border:1px solid #DDCECE;
+	text-align: left;
+	padding-left: 0px;
+	padding-right: 0px;
+
+	transition:all ease-in-out 0.4s;
+
+
+}
+li ul#drop-info li{
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 1px solid transparent;
+	transition:all ease-in-out 0.4s;
+}
+ul#drop-down:hover ul#drop-info{
+	display:block;
+	opacity: 1;
+	top:50px;
+}
+ul#drop-down:hover{
+	background-color: #202A35;
+}
+#drop-info li:hover{
+	color: #fb6b5b;
+	padding-left: 15px;
+}
+.left-tab{
+	display:block;
+	float:left;
+	width: 100%;
+	height:50px;
+	line-height: 50px;
+	border-bottom:1px solid white;
+	border-bottom:1px solid rgba(255, 255, 255, 0.3);
+	padding-top: 0px;
+	text-align:left;
+	cursor: pointer;
+	transition:all ease-in-out 0.4s;
+}
+.left-tab:hover{
+	background-color: #25313e;
+}
+.left-tab:hover h2{
+	color: white;
+}
+.left-tab h2{
+	color:#BBB4AD;
+	margin:0px 0px 0px 40px;
+	font-family: Courier;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	transition:all ease-in-out 0.4s;
+}
+.left-btn-img{
+	display:inline-block;
+	float:left;
+	width: 20px;
+	height: 20px;
+	margin-top: 13px;
+	margin-left: 10px;
+	transition:all ease-in-out 0.4s;
+}
+.left-tab:hover .left-btn-img{
+	transform:rotatez(20deg);
+	}
+#img-overview{
+	background: url('Images/1406261167_pie-chart.png') no-repeat;
+	background-size: cover;
+	background-position: center center; 
+}
+#img-chatrooms{
+	background: url('Images/1406261290_chat-bubble.png') no-repeat;
+	background-size: cover;
+	background-position: center center; 
+}
+#img-users{
+	background: url('Images/1406261366_user.png') no-repeat;
+	background-size: cover;
+	background-position: center center; 
+}
+#img-settings{
+	background: url('Images/1406261375_settings02.png') no-repeat;
+	background-size: cover;
+	background-position: center center; 
+}
+#img-messages{
+	background: url('Images/1406261383_email.png') no-repeat;
+	background-size: cover;
+	background-position: center center; 
+}
+#overview-panel{
+	display:block;
+}
+#chatrooms-panel{
+	display:none;
+}
+#users-panel{
+	display:none;
+}
+#sitesettings-panel{
+	display:none;
+}
+#messages-panel{
+	display:none;
+}
+.panel{
+	display: block;
+	float: left;
+	width: 100%;
+}
+.panel-header-holder{
+	float:left;
+	width: 100%;
+	text-align: left;
+}
+.panel-header{
+	font-family: Courier;
+	color:#CAC9C9;
+	font-size: 40px;
+	margin-left: 20px;
+
+}
+.pane{
+	display:block;
+	float:left;
+	background-color: white;
+	border: 1px solid #CAC9C9;
+	box-shadow: 0px 0px 10px #CAC9C9;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.pane-250{
+	width:250px;
+	height: 180px;
+}
+.pane-520{
+	width:520px;
+	height: 220px;
+}
+.pane-auto{
+	float: none;
+	margin-right: 20px;
+	min-height: 200px;
+}
+#chatroom-stats-150{
+	height: 150px;
+	overflow: auto;
+}
+.top-pane-bar{
+	display: block;
+	float: left;
+	width: 100%;
+	height: 5px;
+	
+}
+.blue{
+	background-color: #9C8FFC;
+}
+.green{
+	background-color: #09B901;
+}
+.red{
+	background-color: #B90101;
+}
+.orange{
+	background-color: #fb6b5b;
+}
+.center-pane-bar, .bottom-pane-bar{
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	
+}
+.center-pane-bar{
+	height: 100px;
+	line-height: 100px;
+}
+.center-pane-bar a{
+	font-family: Tahoma;
+	font-size: 40px;
+	color: #979595;
+
+}
+.bottom-pane-bar a{
+	font-family: Courier;
+	font-size: 20px;
+	color:#6E6D6D;
+}
+.pane-title{
+	display: block;
+	border-bottom: 1px solid #6E6D6D;
+	margin: 15px 10px 0px 10px;
+}
+.pane-title a{
+	font-family: Impact;
+	font-size: 25px;
+	color:#6E6D6D;
+	
+}
+.pane-body{
+	display: block;
+	margin:10px 10px 10px 10px;
+}
+.pane-body table{
+	width:100%;
+}
+.pane-body table td{
+	font-family: Courier;
+	font-size: 20px;
+	color:#6E6D6D;
+	padding: 3px 0px 3px 0px;
+}
+.data-view{
+	max-height: 400px;
+	overflow: auto;
+	
+}
+.data-view table th{
+	font-family: Courier;
+	font-size: 20px;
+	border-bottom: 1px solid #CAC9C9;
+}
+.data-view  table tbody tr{
+	/*border-bottom: 1px dashed #CAC9C9;*/
+}
+.data-view  table {
+	border-collapse: collapse;
+
+}
+.data-view  table td{
+	font-family: Courier;
+	font-size: 15px;
+	padding:5px 5px 5px 5px;
+	border-right:1px dashed #CAC9C9;
+
+}
+.data-view  table td:last-child{
+	border-right:0px solid #CAC9C9;
+	}
+.data-view .even{
+	background-color: #DFDFDF;
+}
+.brk-word{
+	word-break:break-word;
+}
+.table-button{
+	cursor: pointer;
+	color: #fb6b5b;
+}
+#blackbox{
+	display: none;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: 0px 0px 0px 0px;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height: 100%;
+}
+.edit-box{
+	display: block;
+	position: fixed;
+	background-color: white;
+	top:50%;
+	left:50%;
+	border-radius: 10px;
+	border: 2px solid #8B8989;
+	box-shadow: 1px 1px 3px #8B8989;
+}
+#chatroom-edit-box, #newchatroom-edit-box, #settings-edit-box{
+	width: 500px;
+	height: 500px;
+	margin-top:-250px;
+	margin-left:-250px;
+}
+#settings-edit-box{
+	display: none;
+}
+#chatroom-edit-box{
+	display: none;
+}
+#newchatroom-edit-box{
+	display: none;
+}
+#message-edit-box{
+	display: none;
+	width: 500px;
+	height: 500px;
+	margin-top:-250px;
+	margin-left:-250px;
+}
+#account-edit-box,#upload-edit-box{
+	display: none;
+	width: 500px;
+	height: 300px;
+	margin-top:-150px;
+	margin-left:-250px;
+}
+.edit-box-header{
+	display: block;
+	position: relative;
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+.edit-box-title{
+	font-family: Courier;
+	font-size: 20px;
+}
+.edit-close{
+	display: block;
+	font-family: Courier;
+	font-size: 20px;
+	position: absolute;
+	line-height: 30px;
+	height: 30px;
+	width: 30px;
+	left: 100%;
+	top:-35px;
+	margin-left: -15px;
+	background-color: red;
+	color: white;
+	border: 2px solid #8B8989;
+	border-radius: 30px;
+	cursor:pointer;
+}
+.edit-box-body{
+	display:block;
+	clear:both;
+	margin:5px 10px 5px 10px;
+	padding: 10px 10px 0px 10px;
+	overflow-y: auto; 
+}
+#edit-chatroom-body, #edit-message-body, #edit-newchatroom-body, #edit-settings-body{
+	height:380px;
+}
+#edit-account-body, #edit-upload-body{
+	height:180px;
+}
+.edit-box-buttonholder{
+	display:block;
+	clear:both;
+	margin:5px 10px 5px 10px;
+	
+}
+.box-body-row{
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 5px 0px 5px 0px;
+	
+
+}
+.box-body-row>a{
+	display: block;
+	float:left;
+	font-family: Arial;
+	font-size: 15px;
+	text-align: left;
+	padding-top: 5px;
+	width: 150px;
+}
+.box-body-row .right-input{
+	width: 270px;
+}
+.right-input-name{
+	width: 130px;
+}
+#chatroomDescription, #newChatroomDescription, #reply-body{
+	height: 100px;
+}
+#chatroomImageLarge, #chatroomImageSmall, #newChatroomImageLarge, #newChatroomImageSmall{
+	display:block;
+	margin-left: 150px;
+	height: 150px;
+
+}
+#username, #emailmsg, #subject{
+	display:block;
+	margin-left: 150px;
+	height: 30px;
+	font-family: Arial;
+	font-size: 15px;
+	padding-top: 5px;
+	
+
+}
+#body{
+	display:block;
+	margin-left: 150px;
+	font-family: Arial;
+	font-size: 15px;
+	padding-top: 5px;
+	height: 150px;
+	border: 1px dashed #BEBDBD;
+	overflow-y: auto; 
+}
+.lt{
+	display: block;
+	float:left;
+	width: 50px;
+	height: 100%;
+	line-height: 150px;
+	text-align: center;
+	font-family: Impact;
+	font-size: 20px;
+	background-color: #37485A;
+	transition:all ease-in-out 0.4s;
+	cursor: pointer;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.lt:hover{
+	background-color: #ADACAC;
+	color:green;
+}
+.rt{
+	display: block;
+	float:right;
+	width: 50px;
+	height: 100%;
+	line-height: 150px;
+	text-align: center;
+	font-family: Impact;
+	font-size: 20px;
+	background-color: #37485A;
+	transition:all ease-in-out 0.4s;
+	cursor: pointer;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.rt:hover{
+	background-color: #ADACAC;
+	color:green;
+}
+.c{
+	display: block;
+	margin: 0px 50px 0px 50px;
+	background-color: #f3f3f3;
+	height: 100%;
+	background: url('images/business-313592_640.jpg') no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.btn{
+	display: block;
+	float:right;
+	margin:10px 0px 0px 10px;
+	padding: 5px 15px 5px 15px;
+	background-color: #37485A;
+	color:white;
+	font-family: Arial;
+	cursor: pointer;
+}
+#add-chatroom{
+	display: block;
+	float:left;
+	clear: both;
+	margin:10px 0px 0px 20px;
+	padding: 10px 15px 10px 15px;
+	background-color: #fb6b5b;
+	color:white;
+	font-family: Arial;
+	font-size: 20px;
+	cursor: pointer;
+	transition:all ease-in-out 0.4s;
+}
+#add-chatroom:hover{
+	background-color: #FA9388;
+}
+#load-users, #edit-settings{
+	display: block;
+	clear: both;
+	margin:10px auto;
+	width: 190px;
+	padding: 10px 15px 10px 15px;
+	background-color: #fb6b5b;
+	color:white;
+	font-family: Arial;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+	transition:all ease-in-out 0.4s;
+}
+#load-users:hover, #edit-settings:hover{
+	background-color: #FA9388;
+}

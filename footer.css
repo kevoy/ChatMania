@@ -1,0 +1,23 @@
+#footer{
+	display: block;
+	clear: both;
+	height: 100px;
+	background-color: #37485A;
+	background: url("Images/vertical_cloth.png") no-repeat;
+	background-position: center center;
+	background-size: cover;
+	box-shadow: inset 0px 2px 15px black;
+	text-align: center;
+	padding-top: 20px;
+}
+#footer-credits, .footer-attr{
+
+	color:#fb6b5b;
+	font-family: Arial;
+	font-size: 15px;
+	text-decoration: none;
+}
+.footer-attr:link, .footer-attr:visited{
+	text-decoration: none;
+
+}
